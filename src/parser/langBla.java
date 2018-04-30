@@ -7,7 +7,7 @@ public class langBla implements langBlaConstants {
   final static String Version = "B+- Compiler - Version 1.0 - 2018";
   boolean Menosshort = false; // saida resumida = falso
   //Define o metodo main da classe langBla  public static void main(String args []) throws ParseException {
-            String filename = "/home/wellington/Desktop/teste.txt";// nome do arquivo a ser analisado            langBla parser; //AL/AS                int i;
+            String filename = "/home/davi/Desktop/teste.txt";// nome do arquivo a ser analisado            langBla parser; //AL/AS                int i;
                 boolean ms = false;
 
                 System.out.println(Version);
@@ -45,7 +45,7 @@ public class langBla implements langBlaConstants {
                 }
 
                 //verifica se houve erro lexico                if(parser.token_source.foundLexError() != 0) {
-                        System.out.println( parser.token_source.foundLexError() + "Erros lexicos encontrados ");
+                        System.out.println( parser.token_source.foundLexError() + " Erros lexicos encontrados ");
                 } else {
                         System.out.println("Programa analizado");
                 }
@@ -115,6 +115,7 @@ public class langBla implements langBlaConstants {
       case string_constant:
       case char_constant:
       case null_constant:
+      case IDENT:
         ;
         break;
       default:
@@ -278,6 +279,10 @@ public class langBla implements langBlaConstants {
         jj_consume_token(DOT);
             System.out.println("Reconheceu DOT");
         break;
+      case IDENT:
+        jj_consume_token(IDENT);
+              System.out.println("Reconheceu um IDENT");
+        break;
       case int_constant:
         jj_consume_token(int_constant);
                      System.out.println("Reconheceu INTEIRO");
@@ -312,7 +317,7 @@ public class langBla implements langBlaConstants {
         break;
       case string_constant:
         jj_consume_token(string_constant);
-                        System.out.println("Reconheceu STRING");
+                        System.out.println("Reconheceu CONSTANTE STRING");
         break;
       default:
         jj_la1[1] = jj_gen;
@@ -344,7 +349,7 @@ public class langBla implements langBlaConstants {
       jj_la1_0 = new int[] {0xfffff000,0xfffff000,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0xfffffff,0xfffffff,};
+      jj_la1_1 = new int[] {0x1fffffff,0x1fffffff,};
    }
    private static void jj_la1_init_2() {
       jj_la1_2 = new int[] {0x0,0x0,};
