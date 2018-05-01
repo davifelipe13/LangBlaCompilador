@@ -63,41 +63,61 @@ public interface langBlaConstants {
   /** RegularExpression Id. */
   int REM = 37;
   /** RegularExpression Id. */
-  int LPAREN = 38;
+  int NOT = 38;
   /** RegularExpression Id. */
-  int RPAREN = 39;
+  int AND = 39;
   /** RegularExpression Id. */
-  int LBRACE = 40;
+  int OR = 40;
   /** RegularExpression Id. */
-  int RBRACE = 41;
+  int XOR = 41;
   /** RegularExpression Id. */
-  int LBRACKET = 42;
+  int LPAREN = 42;
   /** RegularExpression Id. */
-  int RBRACKET = 43;
+  int RPAREN = 43;
   /** RegularExpression Id. */
-  int SEMICOLON = 44;
+  int LBRACE = 44;
   /** RegularExpression Id. */
-  int COMMA = 45;
+  int RBRACE = 45;
   /** RegularExpression Id. */
-  int DOT = 46;
+  int LBRACKET = 46;
   /** RegularExpression Id. */
-  int int_constant = 47;
+  int RBRACKET = 47;
   /** RegularExpression Id. */
-  int string_constant = 48;
+  int SEMICOLON = 48;
   /** RegularExpression Id. */
-  int null_constant = 49;
+  int COMMA = 49;
   /** RegularExpression Id. */
-  int IDENT = 50;
+  int DOT = 50;
   /** RegularExpression Id. */
-  int CONSTANT = 51;
+  int int_constant = 51;
   /** RegularExpression Id. */
-  int LETTER = 52;
+  int oct_constant = 52;
   /** RegularExpression Id. */
-  int DIGIT = 53;
+  int hexa_constant = 53;
   /** RegularExpression Id. */
-  int INVALID_LEXICAL = 54;
+  int binarios_constant = 54;
   /** RegularExpression Id. */
-  int INVALID_CONST = 55;
+  int float_constant = 55;
+  /** RegularExpression Id. */
+  int boolean_constant = 56;
+  /** RegularExpression Id. */
+  int string_constant = 57;
+  /** RegularExpression Id. */
+  int char_constant = 58;
+  /** RegularExpression Id. */
+  int null_constant = 59;
+  /** RegularExpression Id. */
+  int IDENT = 60;
+  /** RegularExpression Id. */
+  int CONSTANT = 61;
+  /** RegularExpression Id. */
+  int LETTER = 62;
+  /** RegularExpression Id. */
+  int DIGIT = 63;
+  /** RegularExpression Id. */
+  int INVALID_LEXICAL = 64;
+  /** RegularExpression Id. */
+  int INVALID_CONST = 65;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -146,8 +166,12 @@ public interface langBlaConstants {
     "\"*\"",
     "\"/\"",
     "\"%\"",
-    "\")\"",
+    "\"not\"",
+    "\"and\"",
+    "\"or\"",
+    "\"xor\"",
     "\"(\"",
+    "\")\"",
     "\"{\"",
     "\"}\"",
     "\"[\"",
@@ -156,7 +180,13 @@ public interface langBlaConstants {
     "\",\"",
     "\".\"",
     "<int_constant>",
+    "<oct_constant>",
+    "<hexa_constant>",
+    "<binarios_constant>",
+    "<float_constant>",
+    "<boolean_constant>",
     "<string_constant>",
+    "<char_constant>",
     "\"null\"",
     "<IDENT>",
     "<CONSTANT>",
