@@ -18,10 +18,17 @@ public class First { //implementa os conjuntos first p/ alguns n.terminais
         methoddecl.add(new Integer(langBlaConstants.INT));
         methoddecl.add(new Integer(langBlaConstants.STRING));
         methoddecl.add(new Integer(langBlaConstants.IDENT));
+        methoddecl.add(new Integer(langBlaConstants.FLOAT));
+        methoddecl.add(new Integer(langBlaConstants.BOOLEAN));
+        methoddecl.add(new Integer(langBlaConstants.CHAR));
+        
 
         vardecl.add(new Integer(langBlaConstants.INT));
         vardecl.add(new Integer(langBlaConstants.STRING));
         vardecl.add(new Integer(langBlaConstants.IDENT));
+        vardecl.add(new Integer(langBlaConstants.FLOAT));
+        vardecl.add(new Integer(langBlaConstants.BOOLEAN));
+        vardecl.add(new Integer(langBlaConstants.CHAR));
 
         classlist.add(new Integer(langBlaConstants.CLASS));
 
