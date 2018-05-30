@@ -871,8 +871,8 @@ RecoverySet f1 = new RecoverySet(RPAREN).union(g),
   final public void forstat(RecoverySet g) throws ParseException, ParseEOFException {
     trace_call("forstat");
     try {
-RecoverySet f1 = new RecoverySet(SEMICOLON),
-            f2 = new RecoverySet(RPAREN);
+RecoverySet f1 = new RecoverySet(SEMICOLON).union(g),
+            f2 = new RecoverySet(RPAREN).union(g);
       try {
         jj_consume_token(FOR);
         jj_consume_token(LPAREN);
@@ -935,7 +935,7 @@ RecoverySet f1 = new RecoverySet(SEMICOLON),
   final public void statlist(RecoverySet g) throws ParseException, ParseEOFException {
     trace_call("statlist");
     try {
-RecoverySet f = First.statlist.union(g).remove(IDENT);
+RecoverySet f = First.statlist.remove(IDENT).union(g);
       statement(f);
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
       case BREAK:
@@ -1017,8 +1017,8 @@ RecoverySet f = First.statlist.union(g).remove(IDENT);
   final public void alocexpression(RecoverySet g) throws ParseException, ParseEOFException {
     trace_call("alocexpression");
     try {
-RecoverySet f1 = new RecoverySet(RPAREN),
-            f2 = new RecoverySet(RBRACKET);
+RecoverySet f1 = new RecoverySet(RPAREN).union(g),
+            f2 = new RecoverySet(RBRACKET).union(g);
       jj_consume_token(NEW);
       if (jj_2_5(2)) {
         jj_consume_token(IDENT);
