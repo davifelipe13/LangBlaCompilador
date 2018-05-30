@@ -15,7 +15,7 @@ public interface langBlaConstants {
   /** RegularExpression Id. */
   int CLASS = 13;
   /** RegularExpression Id. */
-  int CONSTRUCTIOR = 14;
+  int CONSTRUCTOR = 14;
   /** RegularExpression Id. */
   int ELSE = 15;
   /** RegularExpression Id. */
@@ -27,75 +27,75 @@ public interface langBlaConstants {
   /** RegularExpression Id. */
   int INT = 19;
   /** RegularExpression Id. */
-  int NEW = 20;
+  int FLOAT = 20;
   /** RegularExpression Id. */
-  int PRINT = 21;
+  int BOOLEAN = 21;
   /** RegularExpression Id. */
-  int READ = 22;
+  int CHAR = 22;
   /** RegularExpression Id. */
-  int RETURN = 23;
+  int NEW = 23;
   /** RegularExpression Id. */
-  int STRING = 24;
+  int PRINT = 24;
   /** RegularExpression Id. */
-  int SUPER = 25;
+  int READ = 25;
   /** RegularExpression Id. */
-  int ASSIGN = 26;
+  int RETURN = 26;
   /** RegularExpression Id. */
-  int GT = 27;
+  int STRING = 27;
   /** RegularExpression Id. */
-  int LT = 28;
+  int SUPER = 28;
   /** RegularExpression Id. */
-  int EQ = 29;
+  int ASSIGN = 29;
   /** RegularExpression Id. */
-  int LE = 30;
+  int GT = 30;
   /** RegularExpression Id. */
-  int GE = 31;
+  int LT = 31;
   /** RegularExpression Id. */
-  int NEQ = 32;
+  int EQ = 32;
   /** RegularExpression Id. */
-  int PLUS = 33;
+  int LE = 33;
   /** RegularExpression Id. */
-  int MINUS = 34;
+  int GE = 34;
   /** RegularExpression Id. */
-  int MULTIPLY = 35;
+  int NEQ = 35;
   /** RegularExpression Id. */
-  int DIVIDE = 36;
+  int PLUS = 36;
   /** RegularExpression Id. */
-  int REM = 37;
+  int MINUS = 37;
   /** RegularExpression Id. */
-  int NOT = 38;
+  int MULTIPLY = 38;
   /** RegularExpression Id. */
-  int AND = 39;
+  int DIVIDE = 39;
   /** RegularExpression Id. */
-  int OR = 40;
+  int REM = 40;
   /** RegularExpression Id. */
-  int XOR = 41;
+  int NOT = 41;
   /** RegularExpression Id. */
-  int LPAREN = 42;
+  int AND = 42;
   /** RegularExpression Id. */
-  int RPAREN = 43;
+  int OR = 43;
   /** RegularExpression Id. */
-  int LBRACE = 44;
+  int XOR = 44;
   /** RegularExpression Id. */
-  int RBRACE = 45;
+  int RPAREN = 45;
   /** RegularExpression Id. */
-  int LBRACKET = 46;
+  int LPAREN = 46;
   /** RegularExpression Id. */
-  int RBRACKET = 47;
+  int LBRACE = 47;
   /** RegularExpression Id. */
-  int SEMICOLON = 48;
+  int RBRACE = 48;
   /** RegularExpression Id. */
-  int COMMA = 49;
+  int LBRACKET = 49;
   /** RegularExpression Id. */
-  int DOT = 50;
+  int RBRACKET = 50;
   /** RegularExpression Id. */
-  int int_constant = 51;
+  int SEMICOLON = 51;
   /** RegularExpression Id. */
-  int oct_constant = 52;
+  int COMMA = 52;
   /** RegularExpression Id. */
-  int hexa_constant = 53;
+  int DOT = 53;
   /** RegularExpression Id. */
-  int binarios_constant = 54;
+  int int_constant = 54;
   /** RegularExpression Id. */
   int float_constant = 55;
   /** RegularExpression Id. */
@@ -118,6 +118,12 @@ public interface langBlaConstants {
   int INVALID_LEXICAL = 64;
   /** RegularExpression Id. */
   int INVALID_CONST = 65;
+  /** RegularExpression Id. */
+  int INVALID_CHAR = 66;
+  /** RegularExpression Id. */
+  int EMPTY_CHAR = 67;
+  /** RegularExpression Id. */
+  int CHAR_OUT_OF_BOUNDS = 68;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -148,6 +154,9 @@ public interface langBlaConstants {
     "\"for\"",
     "\"if\"",
     "\"int\"",
+    "\"float\"",
+    "\"boolean\"",
+    "\"char\"",
     "\"new\"",
     "\"print\"",
     "\"read\"",
@@ -170,8 +179,8 @@ public interface langBlaConstants {
     "\"and\"",
     "\"or\"",
     "\"xor\"",
-    "\"(\"",
     "\")\"",
+    "\"(\"",
     "\"{\"",
     "\"}\"",
     "\"[\"",
@@ -180,9 +189,6 @@ public interface langBlaConstants {
     "\",\"",
     "\".\"",
     "<int_constant>",
-    "<oct_constant>",
-    "<hexa_constant>",
-    "<binarios_constant>",
     "<float_constant>",
     "<boolean_constant>",
     "<string_constant>",
@@ -194,6 +200,9 @@ public interface langBlaConstants {
     "<DIGIT>",
     "<INVALID_LEXICAL>",
     "<INVALID_CONST>",
+    "<INVALID_CHAR>",
+    "<EMPTY_CHAR>",
+    "<CHAR_OUT_OF_BOUNDS>",
   };
 
 }
