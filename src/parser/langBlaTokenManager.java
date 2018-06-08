@@ -2,6 +2,8 @@
 package parser;
 import java.io.*;
 import recovery.*;
+                   //importa as classes de recuperação de erros do AS=import syntacticTree.*;
+                        //importa as classes dos nós da árvore sintáticaimport semanalysis.*;
 
 /** Token Manager. */
 public class langBlaTokenManager implements langBlaConstants
